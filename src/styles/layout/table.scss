@@ -1,0 +1,136 @@
+
+
+.main {
+   display: flex;   
+   flex-direction: column;
+   margin-left: 40px;
+   margin-top: 40px;
+}
+
+.main__table {
+   width: fit-content;
+}
+
+.table__header {
+   display: grid;
+   grid-template-columns: repeat(7, 150px);
+   grid-auto-flow: row;
+   background-color: #d8d8d8;
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+}
+
+.table__row {
+   display: grid;
+   grid-template-columns: repeat(7, 150px);
+   grid-auto-flow: row;
+}
+
+.table__cell {
+   padding: 6px 12px;
+   overflow: hidden;
+   // word-spacing: ;
+}
+
+.table__headercell {
+   cursor: pointer;
+   display: flex;
+}
+
+.table__icon {
+   font-size: 12px;
+   margin-left: 8px;
+   align-self: center;
+   transition: .3s;
+}
+
+.rotated {
+   transform: rotate(180deg);
+   transition: .3s;
+}
+
+.table__bodycell {
+   border-right: 1px solid gray;
+
+   &:first-child {
+      border-left: 1px solid gray;
+   }
+}
+
+.table__link {
+   color: blue;
+
+   &:visited {
+      color: purple;
+   }
+}
+
+.table__line {
+   display: block;
+   content: '';
+   border-top: 1px solid black;
+}
+
+
+// inputbox
+
+.main__inputbox {
+   display: flex;
+   height: fit-content;
+   align-items: center;
+   margin-top: 8px;
+   margin-bottom: 16px;
+}
+
+.inputbox__input {
+   width: 160px;
+   border: 1px solid black;
+   border-radius: 6px;
+}
+
+.inputbox__title {
+   font-size: 16px;
+   margin-left: 8px;
+}
+
+
+// form 
+.main__form {
+   display: flex;
+   flex-direction: column;
+}
+
+.main__row {
+   display: flex;
+   margin-bottom: 8px;
+   align-items: center;
+
+   &:last-child {
+      margin-bottom: unset;
+   }
+}
+
+.main__title {
+   margin-left: 8px;
+}
+
+.main__button {
+   width: fit-content;
+   padding: 8px 14px;
+   font-size: 18px;
+   background-color: #d8d8d8;
+   border-radius: 6px;
+   transition: .3s;
+
+   &:hover {
+      background-color: black;
+      color: white;
+      transform: scale(1.05);
+      transition: .3s;
+   }
+
+   &:active {
+      transform: scale(0.95);
+      transition: .15s;
+   }
+}
